@@ -21,26 +21,26 @@ spam_chats = []
 @client.on(events.NewMessage(pattern="^/start$"))
 async def start(event):
   await event.reply(
-    "__**I'm MentionAll Bot**, I can mention almost all members in group or channel 👻\nClick **/help** for more information__\n\n Follow [@ALBINPRAVEEN](https://github.com/ALBINPRAVEEN) on Github",
+    "__**I'm MentionAll Bot**, I can mention almost all members in group or channel 👻\nClick **/help** for more information__\n\n Follow on Github",
     link_preview=False,
     buttons=(
       [
-        Button.url('📣 Group', 'https://t.me/musicwithalby'),
-        Button.url('📦 Developer', 'https://albinpraveen.ml')
+        Button.url('📣 Group', 'https://t.me/alpha_romeo_06'),
+        Button.url('📦 Developer', 'https://t.me/alpha_romeo_06')
       ]
     )
   )
 
 @client.on(events.NewMessage(pattern="^/help$"))
 async def help(event):
-  helptext = "**Help Menu of MentionAllBot**\n\nCommand: /mentionall\n__You can use this command with text what you want to mention others.__\n`Example: /mentionall Good Morning!`\n__You can you this command as a reply to any message. Bot will tag users to that replied messsage__.\n\nFollow [@ALBINPRAVEEN](https://github.com/ALBINPRAVEEN) on Github"
+  helptext = "**Help Menu of MentionAllBot**\n\nCommand: /mentionall\n__You can use this command with text what you want to mention others.__\n`Example: /mentionall Good Morning!`\n__You can you this command as a reply to any message. Bot will tag users to that replied messsage__.\n\nFollow on Github"
   await event.reply(
     helptext,
     link_preview=False,
     buttons=(
       [
-        Button.url('📣 Group', 'https://t.me/musicwithalby'),
-        Button.url('📦 Developer', 'https://albinpraveen.ml')
+        Button.url('📣 Group', 'https://t.me/alpha_romeo_06'),
+        Button.url('📦 Developer', 'https://t.me/alpha_romeo_06')
       ]
     )
   )
@@ -108,7 +108,7 @@ async def mentionall(event):
   except:
     pass
 
-@client.on(events.NewMessage(pattern="^/cancel$"))
+@client.on(events.NewMessage(pattern="^/naku$"))
 async def cancel_spam(event):
   if not event.chat_id in spam_chats:
     return await event.respond('__There is no proccess on going...__')
